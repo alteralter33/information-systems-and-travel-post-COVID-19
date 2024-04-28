@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+	<!-- a-about -->
+	<div class="a-grid">
+		<div class="container">
+			<div class="w3l-about-heading">
+				<h2>Online travelling</h2>
+				<p>"Cloud tourism" is different from on-the-spot tourism and can not bring the feeling of on-the-spot tourism. However, under the barrier of the epidemic, it touches the tourism needs of the public and enjoys the fun of playing at home.</p>
+			</div>
+			<div class="agileits-services-grids">
+				<div class="col-md-6 w3l-services-grid">
+					<div class="services-grid-info">
+						<a href="{%url 'travel_modes1'%}"><h4>The Palace Museum</h4></a>
+						<p>The Palace Museum, as a world cultural heritage, launched an online applet during the epidemic. The "digital Forbidden City" applet fully integrates the online digital services, cultural relics digital achievements, new cultural and creative products, knowledge popularization and functional navigation of the Forbidden City.</p>
+						<img src="{% static 'images/tm1.jpg' %}" class="pic50" />
+					</div>
+				</div>
+				<div class="col-md-6 w3l-services-grid">
+					<div class="services-grid-info">
+						<a href="{%url 'travel_modes2'%}"><h4>Longmen Grottoes</h4></a>
+						<p>Longmen Grottoes is a world cultural heritage and is rated as "the highest peak of Chinese stone carving art" by the United Nations Scientific, educational and cultural organization. Due to the influence of coronavirus disease in 2019, "Longmen Grottoes" scenic spot launched "cloud tourism", and used live broadcasting to lead the audience to visit thousands of years of historic sites.</p>
+						<img src="{% static 'images/tm2.jpg' %}" class="pic50" />
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+{% endblock%}

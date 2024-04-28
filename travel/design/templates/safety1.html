@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{%load static%}
+{% block content %}
+	<!-- a-about -->
+	<div class="a-grid">
+		<div class="container">
+			<div class="w3l-about-heading">
+				<h2>Safety</h2>
+				<h3>-- Food Traceability</h3>
+			</div>
+		</div>
+	</div>
+	<div class="offer">
+		<div class="container">
+			<div class="m-offer-grid" style="background:#fff;text-align:center;">
+            <p>At present, the growth of safety and responsibility awareness have increased the importance of traceability. Traceability is defined as the ability to generate a detailed transaction history for a particular product, which includes the physical location, time spent at each location, record of ownership, packaging configurations and environmental storage conditions. </p>
+            <img class="tm" style="width:100%;" src="{% static 'images/safety11.jpg' %}"/>
+			</div>
+		</div>
+	</div>
+
+	<div class="offer">
+		<div class="container">
+			<div class="m-offer-grid" style="width:28.5%;margin-right:1.5%;float:left;background:#fff;padding:30px;padding-top:0;">
+            <h4>Recommendations</h4>
+				<h5>·Strengthen Legislation</h5>
+				<p style="padding:0;">Nowadays, the lack of hard-and-fast rules on the traceability mechanism of aquatic products in China allows illegal traders to take advantage of loophole. Therefore, the standard of market access, customized minimum traceability unit, sales tracking, product recall and safety social credit of aquatic product may be clarified in law, so as to monitor all food related segments such as aquaculture, processing, packaging, transportation, storage, sales as well as import and export. </p>
+				<h5>·Improve Public Awareness of Anti-counterfeiting</h5>
+				<p style="padding:0;">(1) Increase the cost of buying fake goods. Legislations should not be limited only for those who produce fakes, but the customers who buy these products may also bear some accountabilities.<br/> (2) Training for all supply chain participants is of vital importance, especially for the traceability with high-tech involvement such as RFID system.<br/> (3) Public service advertising and publicity, such as guiding people to distinguish the true labels through TV programs, broadcasting the meaning of traceability in supermarkets, may also be useful.</p>
+			</div>
+			<div class="m-offer-grid" style="width:68.5%;margin-left:1.5%;float:left;background:#fff;text-align:center;padding:30px;padding-top:0;">
+				<h4>Example: Positive Effect of Traceability in Aquatic Products Supply Chain</h4>
+				<img class="tm" style="height:550px;width:100%;" src="{% static 'images/safety12.jpg' %}"/>
+			</div>
+		</div>
+	</div>
+
+	<!-- //a-about -->
+{% endblock%}

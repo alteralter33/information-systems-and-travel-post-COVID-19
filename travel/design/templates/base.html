@@ -1,0 +1,142 @@
+{% load static %}
+<html>
+<head>
+<title>Tasmanian Devil</title>
+<link rel="icon" href="{% static 'images/tasmaniandevilsmall.png' %}" type="image/x-icon">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Tasmanian Devil 2021">
+<meta name="keywords" content="Information System, Travel Safety, Travel Modes, Logistics " />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- css -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'css/ken-burns.css' %}">
+<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+<!--// css -->
+<!-- font -->
+<link href='#css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+<link href='#css?family=Pacifico' rel='stylesheet' type='text/css'>
+<!-- //font -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+</head>
+<body>
+	<!-- banner -->
+	<div class="subpage-banner">
+		<div class="top-banner" id="sub-top-banner">
+			<div class="container">
+				<div class="top-banner-left sub">
+					<ul>
+						<li><i class="fa fa-phone" aria-hidden="true"></i>+1 123 456 789</li>
+						<li><a href="mailto:zzhang38@utas.edu.au"><i class="fa fa-envelope" aria-hidden="true"></i>zzhang38@utas.edu.au</a></li>
+					</ul>
+				</div>
+				{% if user.is_authenticated %}
+				<div class="top-banner-right sub">
+					<a href="{% url 'user_logout'  %}">
+						<button class="sublogin">
+							<span>Logout</span>
+						</button>
+					</a>
+				</div>
+				<p id="subuser" >Welcome! {{ user.username }}</p>
+				{% else %}
+				<div class="top-banner-right sub">
+					<a href="{% url 'login'  %}">
+						<button class="sublogin">
+							<span>Login</span>
+						</button>
+					</a>
+				</div>
+				{% endif %}
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="baseheader">
+			<div class="container">
+				<div class="logo">
+						<a href="index.html"><img src="{% static 'images/tasmaniandevil.png' %}" height=60px ></a>
+				</div>
+				<div class="sub-top-nav">
+					<nav class="navbar navbar-default">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu
+							</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse sub" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a class="active" href="{% url 'index'  %}">Home</a></li>
+								<li><a href="{% url 'about'  %}">About</a></li>
+								<li><a href="{% url 'travel_system'  %}">IS & Travel</a></li>
+								<li><a href="{% url 'travel_modes'  %}">Travel Modes</a></li>
+								<li><a href="{% url 'safety'  %}">Safety</a></li>
+								<li><a href="{% url 'contact'  %}">Contact</a></li>
+								<div class="clearfix"> </div>
+							</ul>
+						</div>
+					</nav>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+	<div class="block">
+            {% block content %}
+            {% endblock %}
+	</div>
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-4 footer-grid">
+					<div class="footer-grid-heading">
+						<h4>Address</h4>
+					</div>
+					<div class="footer-grid-info">
+						<p>Tasmanian Devil inc
+							<span>999 Hucheng Ring Road Lingang, Shanghai, China.</span>
+						</p>
+						<p class="phone">Phone : +1 123 456 789
+							<span>Email : <a href="mailto:zzhang38@utas.edu.au">zzhang38@utas.edu.au</a></span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4 footer-grid">
+					<div class="footer-grid-heading">
+						<h4>Navigation</h4>
+					</div>
+					<div class="footer-grid-info">
+						<ul>
+							<li><a href="{% url 'about'  %}">About</a></li>
+							<li><a href="{% url 'travel_system'  %}">IS & Travel</a></li>
+							<li><a href="{% url 'travel_modes'  %}">Travel Modes</a></li>
+							<li><a href="{% url 'safety'  %}">Safety</a></li>
+							<li><a href="{% url 'contact'  %}">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 footer-grid">
+					<div class="footer-grid-heading">
+						<h4>Follow</h4>
+					</div>
+					<div class="social">
+						<ul>
+							<li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="https://rss.com/"><i class="fa fa-rss"></i></a></li>
+							<li><a href="https://vk.com/"><i class="fa fa-vk"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="copyright">
+				<p>Copyright &copy; 2021.Tasmanian Devil All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+	<script src="js/SmoothScroll.min.js"></script>
+</body>
+</html>

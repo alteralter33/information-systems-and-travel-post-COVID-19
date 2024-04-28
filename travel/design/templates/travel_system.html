@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+	<!-- a-about -->
+	<div class="a-grid">
+		<div class="container">
+			<div class="w3l-about-heading">
+				<h2>IS & Travel Safety</h2>
+				<p>After the epidemic, people‘s travel safety has attracted extensive attention. How to ensure their own health under the environment of wanton virus is inseparable from the help of a series of information systems. For example, real-time passenger flow statistics system and health code QR based on big data.</p>
+			</div>
+			<div class="agileits-services-grids">
+				<div class="col-md-6 w3l-services-grid">
+					<div class="services-grid-info">
+						<a href="{%url 'travel_system1'%}"><h4 >Real-Time Passenger Flow Statistics System</h4></a>
+						<p>The real-time passenger flow statistics system can summarize, mine, compare and analyze the current passenger flow information, which can better help people understand the passenger flow in each tourism area. It provides a choice for people to avoid peak areas. With the passenger flow system, people can browse in advance and better arrange their travel plans even if they have not come to the scenic spot. Meanwhile, it is also convenient for the management of the park.</p>
+						<img src="{% static 'images/is1.jpg' %}" class="pic50" />
+					</div>
+				</div>
+				<div class="col-md-6 w3l-services-grid">
+					<div class="services-grid-info">
+						<a href="{%url 'travel_system2'%}"><h4>Health QR Code</h4></a>
+						<p>After the outbreak of COVID-19, the online health code Mini program provides people with the basis of health certification for people's travel safety and health. At the same time, based on big data analysis, the system can accurately identify the areas people have been to and the public transport used, so as to provide health protection for people's travel safety.</p>
+						<img src="{% static 'images/is2.jpg' %}" class="pic50" />
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+{% endblock%}

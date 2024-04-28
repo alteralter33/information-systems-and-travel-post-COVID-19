@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+	<!-- blog -->
+		<div class="a-grid">
+					<div class="container">
+						<div class="w3l-about-heading">
+						<h2>How IS enhance Travel Safety Post COVID-19</h2>
+							<h3>-- Real-Time Passenger Flow Statistics System</h3>
+						</div>
+					</div>
+				</div>
+		<div class="blog">
+				<!-- container -->
+				<div class="container">
+					<div class="col-md-4 blog-top-right-grid">
+						<div class="categories">
+							<h3>Know More</h3>
+							<p>If you want to know the real-time passenger flow of the tourist attractions in Shanghai, you can check the following website.</p>
+							<ul>
+								<li><a href="http://lysh.eastday.com/">Click Here</a></li>
+							</ul>
+						</div>
+						<div class="categories">
+							<div class="opinion">
+								<div class="contact-form-right">
+									<div class="contact-form-top">
+										<h3>Send us a message</h3>
+									</div>
+									<div class="contact-form-grid">
+										{% if user.is_authenticated %}
+										<p>{{ user.username }}, would you like to leave some comments?</p>
+										<form action="{% url 'comment' %}" method="post">
+											{% csrf_token %}
+											<textarea name="text" placeholder="Please leave your comments ;)" required=""></textarea>
+											<button class="btn1">Submit</button>
+										</form>
+										{% else %}
+										<p>Login to make your comments</p>
+										<a href="{% url 'login'  %}">
+										<button class="btn1">
+											<span>Login</span>
+										</button>
+										</a>
+										{% endif %}
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8 blog-top-left-grid">
+						<div class="left-blog left-single">
+							<div class="blog-left">
+								<div class="single-left-left">
+									<!--<h1>How IS enhance Travel Safety Post COVID-19 — </h1>
+									<h2>Real-Time Passenger Flow Statistics System</h2>-->
+									<img src="{%static 'images/is11.jpg'%}" alt="" class="ispic"/>
+									<p class="annotation">Passenger flow statistics of popular business districts</p>
+								</div>
+								<div class="blog-left-bottom">
+									<p>The tourism big data analysis platform is based on the idea of "platform + service + application". According to the needs of construction, it adopts cloud computing key technologies such as big data processing and mining analysis, machine learning, intelligent message push, social cooperation and service architecture to build the tourism cloud computing platform into a new generation of loosely coupled, efficient and highly available Highly extensible, safe and reliable application service support platform.</p>
+								</div>
+								<div class="blog-left-bottom left-bottom">
+									<h3>Real time passenger flow of various tourist attractions in Shanghai</h3>
+									<img src="{%static 'images/is12.jpg'%}" alt="" class="ispic"/>
+									<p>Through the real-time passenger flow statistics, we can clearly see the passenger flow of each scenic spot, and the tourists provide a practical and effective reference for tourism. With the help of real-time passenger flow statistics, tourists can make their own choices, reduce the waiting time, greatly increase the comfort of tourism and better arrange their time. </p>								</div>
+							</div>
+<!--							<div class="response">
+								<h3>Responses</h3>
+								<div class="media response-info">
+									<div class="media-left response-text-left">
+										<a href="#">
+											<img class="media-object" src="images/t1.jpg" alt="">
+										</a>
+										<h5><a href="#">Admin</a></h5>
+									</div>
+									<div class="media-body response-text-right">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
+											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<ul>
+											<li>June 21, 2016</li>
+											<li><a href="single.html">Reply</a></li>
+										</ul>
+										<div class="media response-info">
+											<div class="media-left response-text-left">
+												<a href="#">
+													<img class="media-object" src="images/t2.jpg" alt="">
+												</a>
+												<h5><a href="#">Admin</a></h5>
+											</div>
+											<div class="media-body response-text-right">
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
+													sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+												<ul>
+													<li>June 21, 2016</li>
+													<li><a href="single.html">Reply</a></li>
+												</ul>		
+											</div>
+											<div class="clearfix"> </div>
+										</div>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="media response-info">
+									<div class="media-left response-text-left">
+										<a href="#">
+											<img class="media-object" src="images/t3.jpg" alt="">
+										</a>
+										<h5><a href="#">Admin</a></h5>
+									</div>
+									<div class="media-body response-text-right">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
+											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<ul>
+											<li>June 21, 2016</li>
+											<li><a href="single.html">Reply</a></li>
+										</ul>		
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+-->
+
+
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<!-- //container -->
+		</div>
+		<!-- //blog -->
+{% endblock%}

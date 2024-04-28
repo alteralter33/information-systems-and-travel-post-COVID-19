@@ -1,0 +1,288 @@
+{% load static %}
+<html>
+<head>
+<title>Tasmanian Devil</title>
+<link rel="icon" href="{% static 'images/tasmaniandevilsmall.png' %}" type="image/x-icon">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Tasmanian Devil 2021">
+<meta name="keywords" content="Information System, Travel Safety, Travel Modes, Logistics " />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- css -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'css/ken-burns.css' %}">
+<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+<!--// css -->
+<!-- font -->
+<link href='#css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+<link href='#css?family=Pacifico' rel='stylesheet' type='text/css'>
+<!-- //font -->
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner">
+		<div class="top-banner">
+			<div class="container">
+				<div class="top-banner-left">
+					<ul>
+						<li><i class="fa fa-phone" aria-hidden="true"></i>+1 123 456 789</li>
+						<li><a href="mailto:zzhang38@utas.edu.au"><i class="fa fa-envelope" aria-hidden="true"></i>zzhang38@utas.edu.au</a></li>
+					</ul>
+				</div>
+				{% if user.is_authenticated %}
+				<div class="top-banner-right">
+					<a href="{% url 'user_logout'  %}">
+						<button class="login">
+							<span>Logout</span>
+						</button>
+					</a>
+				</div>
+				<p id="user">Welcome! {{ user.username }}</p>
+				{% else %}
+				<div class="top-banner-right">
+					<a href="{% url 'login'  %}">
+						<button class="login">
+							<span>Login</span>
+						</button>
+					</a>
+				</div>
+				{% endif %}
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="container">
+				<div class="logo">
+						<a href="index.html"><img src="{% static 'images/tasmaniandevil.png' %}" height=60px ></a>
+				</div>
+				<div class="top-nav">
+					<nav class="navbar navbar-default">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu						
+							</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a class="active" href="{% url 'index'  %}">Home</a></li>
+								<li><a href="{% url 'about'  %}">About</a></li>
+								<li><a href="{% url 'travel_system'  %}">IS & Travel</a></li>
+								<li><a href="{% url 'travel_modes'  %}">Travel Modes</a></li>
+								<li><a href="{% url 'safety'  %}">Safety</a></li>
+								<li><a href="{% url 'contact'  %}">Contact</a></li>
+								<div class="clearfix"> </div>
+							</ul>	
+						</div>	
+					</nav>		
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+	<div id="kb" class="carousel kb_elastic animate_text kb_wrapper" data-ride="carousel" data-interval="6000" data-pause="hover">
+            <!-- Wrapper for Slides -->
+            <div class="carousel-inner" role="listbox">
+                <!-- First Slide -->
+                <div class="item active">
+					<div class="slider">
+					<div class="carousel-caption kb_caption slider-grid">
+							<h3>Information Systems and Travel post COVID-19</h3>
+					</div>
+					</div>
+                </div>
+
+                <!-- Second Slide -->
+                <div class="item">
+					<div class="slider slider1">
+					<div class="carousel-caption kb_caption slider-grid">
+							<h3>Information Systems and Travel post COVID-19</h3>
+					</div>
+					</div>
+                </div>
+
+                <!-- Third Slide -->
+                <div class="item">
+					<div class="slider slider2">
+					<div class="carousel-caption kb_caption slider-grid">
+							<h3>Information Systems and Travel post COVID-19</h3>
+					</div>
+					</div>
+                </div>
+
+            </div>
+            <!-- Navigation Buttons -->
+            <!-- Left Button -->
+            <a class="left carousel-control kb_control_left" href="#kb" role="button" data-slide="prev">
+                <span class="fa fa-angle-left kb_icons" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <!-- Right Button -->
+            <a class="right carousel-control kb_control_right" href="#kb" role="button" data-slide="next">
+                <span class="fa fa-angle-right kb_icons" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+    </div> 
+	<!-- about -->
+	<div class="about">
+		<div class="container">
+			<div class="w3l-about-heading">
+				<h2>Information Systems and Travel post COVID-19</h2>
+				<p>The public health emergency of COVID-19 pandemic has caused an unprecedented impact on human lives since 2020. Over five million lives have been officially claimed since its outbreak, according to data from the Johns Hopkins Coronavirus Resource Center (figure 1).</P>
+				<img id="figure1" src="{% static 'images/figure1.jpg' %}"/>
+			</div>
+		</div>
+	</div>
+	<!-- //about -->
+	<!-- offer -->
+	<div class="offer">
+		<div class="container">
+			<div class="wthree-offer-grid">
+				<table>
+				<td class="div-inline"><img id="figure2" src="{% static 'images/figure2.jpg' %}"/></td>
+				<td class="div-inline">
+					<p>As one of the most vulnerable sectors exposed to the pandemic, tourism has been severely affected. Thanks to information system, we can easily know that the number of tourists is decreasing and tourism is being affected to some extent all over the world (figure 2).</p>
+				</td>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- //offer -->
+	<!-- news -->
+	<div class="news">
+		<div class="container">
+			<div class="news-heading">
+				<div id="start"><h4>Now let’s get started!</h4></div>
+				<p>In this website, we have three topics: how information systems enhance travel safety post COVID-19, travel modes, and safety</p>
+				<div class="news-grid-info-bottom-text">
+					<a href="{% url 'login'  %}"><p style="color:#fd5c63;">Login to view more details.</p></a>
+				</div>
+			</div>
+			<div class="news-grids">
+				<div class="col-md-4 news-grid">
+					<div class="agile-news-grid-info">
+						<div class="news-grid-info-img">
+							<a href="{% url 'travel_system'  %}"><img src="{% static 'images/n1.jpg' %}" alt="" /></a>
+						</div>
+						<div class="news-grid-info-bottom">
+							<div class="date-grid">
+								<div class="admin">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</div>
+								<div class="time">
+									<p><i class="fa fa-calendar" aria-hidden="true"></i> November, 2021</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="news-grid-info-bottom-text">
+								<a href="{% url 'travel_system'  %}">IS & Travel Safety</a>
+								<p>Don't want to go to a crowded scenic spot? Don't know how many tourists are there? Real-time visitor flow system helps you solve the problem! It can provide real-time passenger flow information; measure the crowd data of attractions hourly, daily, weekly, monthly and yearly; provide a variety of reports for analysis and query, and form a graphical display.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 news-grid">
+					<div class="agile-news-grid-info">
+						<div class="news-grid-info-img">
+							<a href="{% url 'travel_modes'  %}"><img src="{% static 'images/n2.jpg' %}" alt="" /></a>
+						</div>
+						<div class="news-grid-info-bottom">
+							<div class="date-grid">
+								<div class="admin">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</div>
+								<div class="time">
+									<p><i class="fa fa-calendar" aria-hidden="true"></i> November, 2021</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="news-grid-info-bottom-text">
+								<a href="{% url 'travel_modes'  %}">Travel Modes — Online Travelling</a>
+								<p>We live in an age of unprecedented access to digital technology. Some of the world’s most popular and remote destinations have created libraries of online images and video, as well as 360 degree virtual tours that let you virtually explore museums, galleries, world wonders and even national parks.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 news-grid">
+					<div class="agile-news-grid-info">
+						<div class="news-grid-info-img">
+							<a href="{% url 'safety'  %}"><img src="{% static 'images/n3.jpg' %}" alt="" /></a>
+						</div>
+						<div class="news-grid-info-bottom">
+							<div class="date-grid">
+								<div class="admin">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</div>
+								<div class="time">
+									<p><i class="fa fa-calendar" aria-hidden="true"></i> November, 2021</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="news-grid-info-bottom-text">
+								<a href="{% url 'safety'  %}">Safety — Logistics</a>
+								<p>Since COVID-19 can spread between people through respiratory droplets or small particles produced when an infected person coughs, talks, or breathes, and the droplets can remain suspended in the air and travel distances beyond six feet, human safety in today’s world has been a highly contentious issue. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //news -->
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-4 footer-grid">
+					<div class="footer-grid-heading">
+						<h4>Address</h4>
+					</div>
+					<div class="footer-grid-info">
+						<p>Tasmanian Devil inc
+							<span>999 Hucheng Ring Road Lingang, Shanghai, China.</span>
+						</p>
+						<p class="phone">Phone : +1 123 456 789
+							<span>Email : <a href="mailto:zzhang38@utas.edu.au">zzhang38@utas.edu.au</a></span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4 footer-grid">
+					<div class="footer-grid-heading">
+						<h4>Navigation</h4>
+					</div>
+					<div class="footer-grid-info">
+						<ul>
+							<li><a href="{% url 'about'  %}">About</a></li>
+							<li><a href="{% url 'travel_system'  %}">IS & Travel</a></li>
+							<li><a href="{% url 'travel_modes'  %}">Travel Modes</a></li>
+							<li><a href="{% url 'safety'  %}">Safety</a></li>
+							<li><a href="{% url 'contact'  %}">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 footer-grid">
+					<div class="footer-grid-heading">
+						<h4>Follow</h4>
+					</div>
+					<div class="social">
+						<ul>
+							<li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="https://rss.com/"><i class="fa fa-rss"></i></a></li>
+							<li><a href="https://vk.com/"><i class="fa fa-vk"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="copyright">
+				<p>Copyright &copy; 2021.Tasmanian Devil All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+	<script src="js/SmoothScroll.min.js"></script>
+</body>	
+</html>

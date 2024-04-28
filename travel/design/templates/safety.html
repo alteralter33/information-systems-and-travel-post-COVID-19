@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+	<!-- a-about -->
+	<div class="a-grid">
+		<div class="container">
+			<div class="w3l-about-heading">
+				<h2>Safety</h2>
+				<p>"Safety" has become one of the most searched keywords since COVID-19 epidemic. COVID-19 can spread between people through respiratory droplets or small particles produced when an infected person coughs, talks, or breathes. Growing evidence shows that droplets can remain suspended in the air and travel distances beyond six feet, according to the CDC.</p>
+				<p>In this topic, we focus on food traceability and contactless delivery system. </p>
+			</div>
+			<div class="agileits-services-grids">
+				<div class="col-md-6 w3l-services-grid">
+					<div class="services-grid-info">
+						<a href="{%url 'safety1'%}"><h4>Food Traceability</h4></a>
+						<p>The growth of food safety in post COVID-19 has increased the importance of traceability, as it indicates quality and safety guarantee. Traceability means the ability to generate a detailed transaction history for a particular product (where it is from), including the physical location, time spent at each location, record of ownership, packaging configurations and environmental storage conditions.</p>
+						<img src="{% static 'images/safety1.jpg' %}" class="pic50" />
+					</div>
+				</div>
+				<div class="col-md-6 w3l-services-grid">
+					<div class="services-grid-info">
+						<a href="{%url 'safety2'%}"><h4>Contactless Delivery System</h4></a>
+						<p>Contactless delivery is a new delivery model that gained immense popularity owing to the strict social distancing regulations implemented by governments across the world. In this type of delivery model, a delivery executive places an order outside the customer’s doorstep to eliminate any kind of physical interaction.</p>
+						<img src="{% static 'images/safety2.jpg' %}" class="pic50" />
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //a-about -->
+	<!--
+	<div class="jarallax more-offer">
+		<div class="container">
+			<div class="w3-different-heading">
+				<h3>Special Features</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta efficitur ante quis volutpat.</p>
+			</div>
+			<div class="w3agile-different-info">
+				<p>Cras vehicula massa id ipsum venenatis, non convallis libero pellentesque. Sed tristique massa et mattis mattis. Nunc euismod consequat ex, eu tincidunt justo malesuada vitae. Sed auctor diam quis nulla hendrerit porta. Quisque venenatis, tortor quis tristique congue, lorem lectus elementum augue, in laoreet lorem justo lacinia velit. Phasellus tempus luctus velit, eu fermentum arcu porttitor sit amet. Suspendisse id efficitur sem. Donec laoreet ante at facilisis dictum. Donec sodales porta orci sed porta. Vivamus est enim, pharetra sit amet placerat ut, eleifend quis purus. Sed elementum tortor erat, placerat rutrum augue facilisis vel. Morbi feugiat tortor erat, nec gravida mauris egestas tincidunt. Sed vitae dignissim sapien.</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+        /* init Jarallax */
+        $('.jarallax').jarallax({
+            speed: 0.5,
+            imgWidth: 1366,
+            imgHeight: 768
+        })
+    </script>
+
+
+	<div class="more-bottom">
+		<div class="container">
+			<div class="more-bottom-heading">
+				<h3>Offered Services</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta efficitur ante quis volutpat.</p>
+			</div>
+			<div class="more-bottom-grids">
+				<div class="col-md-4 more-bottom-grid">
+					<div class="more-bottom-grid-info">
+						<div class="more-bottom-grid-img">
+							<img src="images/s1.jpg" alt="" />
+						</div>
+						<div class="more-bottom-grid-text">
+							<h5>Nullam tincidunt sed augue at sodales. Ut dignissim ipsum dolor</h5>
+							<p>Etiam mollis sem mi, sit amet tincidunt sem euismod ut. Donec dictum nisi sit amet ex volutpat interdum. Duis accumsan tellus urna, eget tincidunt purus vehicula ornare. Curabitur sed erat lacus. Sed vitae congue nisi.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 more-bottom-grid">
+					<div class="more-bottom-grid-info">
+						<div class="more-bottom-grid-img">
+							<img src="images/s2.jpg" alt="" />
+						</div>
+						<div class="more-bottom-grid-text">
+							<h5>Nullam tincidunt sed augue at sodales. Ut dignissim ipsum dolor</h5>
+							<p>Etiam mollis sem mi, sit amet tincidunt sem euismod ut. Donec dictum nisi sit amet ex volutpat interdum. Duis accumsan tellus urna, eget tincidunt purus vehicula ornare. Curabitur sed erat lacus. Sed vitae congue nisi.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 more-bottom-grid">
+					<div class="more-bottom-grid-info">
+						<div class="more-bottom-grid-img">
+							<img src="images/s3.jpg" alt="" />
+						</div>
+						<div class="more-bottom-grid-text">
+							<h5>Nullam tincidunt sed augue at sodales. Ut dignissim ipsum dolor</h5>
+							<p>Etiam mollis sem mi, sit amet tincidunt sem euismod ut. Donec dictum nisi sit amet ex volutpat interdum. Duis accumsan tellus urna, eget tincidunt purus vehicula ornare. Curabitur sed erat lacus. Sed vitae congue nisi.</p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+//team -->
+{% endblock%}

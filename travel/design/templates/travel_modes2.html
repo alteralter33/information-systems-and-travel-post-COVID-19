@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+	<div class="a-grid">
+		<div class="container">
+			<div class="w3l-about-heading" >
+				<h2>Online travelling</h2>
+				<h3>-- Longmen Grottoes</h3>
+			</div>
+		</div>
+	</div>
+	<!-- blog -->
+		<div class="blog" style="margin-top:0;">
+				<!-- container -->
+				<div class="container">
+					<div class="col-md-4 blog-top-right-grid">
+						<div class="categories">
+							<h2>Live broadcast</h2>
+							<p>"Live broadcasting refers to the use of Internet and streaming media technology for live broadcasting. Video has gradually become the mainstream expression of the Internet because it integrates rich elements such as image, text and sound. Through real and vivid communication, it creates a strong sense of scene, attracts eyeballs, and achieves the communication effect of profound image and lasting memory."</p>
+							<img src="{%static 'images/tm23.jpg'%}" width="100%">
+						</div>
+						<div class="categories">
+							<div class="opinion">
+								<div class="contact-form-right">
+									<div class="contact-form-top">
+										<h3>Send us a message</h3>
+									</div>
+									<div class="contact-form-grid">
+										{% if user.is_authenticated %}
+										<p>{{ user.username }}, would you like to leave some comments?</p>
+										<form action="{% url 'comment' %}" method="post">
+											{% csrf_token %}
+											<textarea name="text" placeholder="Please leave your comments ;)" required=""></textarea>
+											<button class="btn1">Submit</button>
+										</form>
+										{% else %}
+										<p>Login to make your comments</p>
+										<a href="{% url 'login'  %}">
+										<button class="btn1">
+											<span>Login</span>
+										</button>
+										</a>
+										{% endif %}
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8 blog-top-left-grid">
+						<div class="left-blog left-single">
+							<div class="blog-left">
+								<div class="single-left-left">
+									<img src="{%static 'images/tm21.jpg'%}" alt="" class="ispic"/>
+									<!--<p class="annotation">Passenger flow statistics of popular business districts</p>-->
+								</div>
+								<div class="blog-left-bottom">
+									<p>The online "cloud tourism" model can not only meet the cultural needs of the public, but also relieve the epidemic pressure and preheat the recovery of tourism.</p>
+									<p>During the epidemic, hotels, catering, transportation and other modules were forced to shut down, which dealt a heavy blow to the whole tourism industry. In order to survive, scenic spots everywhere need to find a new way out.</p>
+									<p>Usually, the live broadcast of tourism with high audience participation is mostly the overall tour mode of the scenic spot. The anchor leads users to visit all details online and publicize the scenic spots.</p>
+									<p>Cooperate with the interaction between the anchor and tourists to improve the audience's consumption intention of the scenic spot.</p>
+								</div>
+								<div class="blog-left-bottom left-bottom">
+									<img src="{%static 'images/tm22.jpg'%}" alt="" class="ispic"/>
+									<p>It is reported that the online live broadcast of Longmen Grottoes has brought a total of 28 million exposure to Longmen Grottoes scenic spot, effectively improving its online promotion efficiency.</p>
+									<p>Under the lens of senior tour guides and female anchors, netizens visited the magnificent posture of the Millennium ancient Grottoes through live broadcast. The tour guides' vivid explanations attracted 384000 home visitors to watch online at the same time.</p>
+									<p>During the live broadcast, netizens can ask questions and participate in interaction through the comment area at any time. Through online tourism, people can still intuitively feel the wisdom and skills of the ancients. The live broadcast allows thousands of netizens to enjoy the beautiful scenery of the motherland, release their depressed mood and enjoy rich and colorful cultural life without leaving home.</p>
+								</div>
+							</div>
+<!--							<div class="response">
+								<h3>Responses</h3>
+								<div class="media response-info">
+									<div class="media-left response-text-left">
+										<a href="#">
+											<img class="media-object" src="images/t1.jpg" alt="">
+										</a>
+										<h5><a href="#">Admin</a></h5>
+									</div>
+									<div class="media-body response-text-right">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available,
+											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<ul>
+											<li>June 21, 2016</li>
+											<li><a href="single.html">Reply</a></li>
+										</ul>
+										<div class="media response-info">
+											<div class="media-left response-text-left">
+												<a href="#">
+													<img class="media-object" src="images/t2.jpg" alt="">
+												</a>
+												<h5><a href="#">Admin</a></h5>
+											</div>
+											<div class="media-body response-text-right">
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available,
+													sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+												<ul>
+													<li>June 21, 2016</li>
+													<li><a href="single.html">Reply</a></li>
+												</ul>
+											</div>
+											<div class="clearfix"> </div>
+										</div>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="media response-info">
+									<div class="media-left response-text-left">
+										<a href="#">
+											<img class="media-object" src="images/t3.jpg" alt="">
+										</a>
+										<h5><a href="#">Admin</a></h5>
+									</div>
+									<div class="media-body response-text-right">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available,
+											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<ul>
+											<li>June 21, 2016</li>
+											<li><a href="single.html">Reply</a></li>
+										</ul>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+-->
+
+
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<!-- //container -->
+		</div>
+		<!-- //blog -->
+{% endblock%}

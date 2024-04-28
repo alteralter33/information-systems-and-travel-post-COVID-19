@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{%load static%}
+{% block content %}
+	<!-- a-about -->
+	<div class="a-grid">
+		<div class="container">
+			<div class="w3l-about-heading">
+				<h2>How IS enhance Travel Safety Post COVID-19</h2>
+				<h3>-- Health QR code</h3>
+			</div>
+		</div>
+	</div>
+	<div class="offer">
+		<div class="container">
+			<div class="m-offer-grid" style="background:#fff;text-align:center;">
+					<p>The implementation of health code depends on the comparison and monitoring of regular dynamic data, and the large-scale real-time dynamic query of 100 million users, which is inseparable from the support of big data technology.</p>
+					<img class="tm" src="{% static 'images/is21.jpg' %}"/>
+			</div>
+		</div>
+	</div>
+	<div class="offer">
+		<div class="container">
+			<div style="text-align:center;">
+				<h2> User information entry</h2>
+				<p>1. Name ID card mobile phone number home address</p>
+				<p>2. Have you been exposed to confirmed / suspected cases</p>
+				<p>3. Whether to go to the current body temperature in the high risk area</p>
+			</div>
+				<div class="qr qrred">
+					<div class="qrimg"><img src="{% static 'images/is22.jpg' %}"/></div>
+					<div class="qrtext">
+						<h3>Red code standard</h3>
+						<p>① Confirmed cases, suspected cases, asymptomatic infected persons, cured discharged confirmed patients and asymptomatic infected persons who have been under home (centralized) isolation medical observation for less than 14 days:</p>
+						<p>② Close contacts of confirmed cases, suspected cases and asymptomatic infected persons;</p>
+						<p>③ Personnel from areas with high epidemic risk;</p>
+						<p>④ Personnel under centralized isolation medical observation;</p>
+						<p>⑤ Other personnel who need to be included in red code management.</p>
+					</div>
+				</div>
+				<div class="qr qryellow">
+					<div class="qrimg"><img src="{% static 'images/is23.jpg' %}"/></div>
+					<div class="qrtext">
+						<h3>Yellow code standard</h3>
+						<p>① Persons with a body temperature of 37.3 ℃ or above or one of the clinical manifestations such as respiratory symptoms (dry cough, expectoration, stuffy nose, sore throat, shortness of breath, dyspnea), physical discomfort (fatigue, muscle pain, headache, joint pain), gastrointestinal symptoms (abdominal pain, diarrhea, nausea, vomiting) and conjunctival bleeding;</p>
+						<p>② Persons from risk areas of the epidemic;</p>
+						<p>③ There may be close contact with confirmed patients, suspected patients and asymptomatic infected persons within 14 days, such as taking the same public transport and living in the same building unit; </p>
+						<p>④ Other personnel who need to be included in yellow code management.</p>
+					</div>
+				</div>
+				<div class="qr qrgreen">
+					<div class="qrimg"><img src="{% static 'images/is24.jpg' %}"/></div>
+					<div class="qrtext">
+						<h3>Green code standard</h3>
+						<p>① Personnel other than the red code and yellow code standards;</p>
+						<p>② personnel included in the "white list" of epidemic prevention and control.</p>
+					</div>
+				</div>
+		</div>
+	</div>
+
+	<!-- //a-about -->
+{% endblock%}
